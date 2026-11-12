@@ -3,7 +3,7 @@
 
 ---
 
-# Todo o FrontEnd também pode ser feito com a ferramenta de **google stitch**, após criar todo o design de interfaces (UI/UX) leve o codigo para o Gemini e faça as adaptações para o BackEnd Django Templates, fornecendo os models.py, views.py, forms.py
+## Todo o FrontEnd também pode ser feito com a ferramenta de **google stitch**, após criar todo o design de interfaces (UI/UX) leve o codigo para o Gemini e faça as adaptações para o BackEnd Django Templates, fornecendo os models.py, views.py, forms.py
 
 ---
 
@@ -35,9 +35,9 @@ VS Code / Django (Estrutura e Deploy): Você cria as pastas (templates/ e static
 
 Configure o Tailwind via CDN: Isso garante que qualquer código gerado pelo Stitch funcione imediatamente no seu navegador.
 
-└── templates/
-        └── core/
-            └── base.html # Layout
+        └── templates/
+                └── core/
+                    └── base.html # Layout
 
       <!DOCTYPE html>
       <html lang="pt-br">
@@ -59,9 +59,25 @@ Configure o Tailwind via CDN: Isso garante que qualquer código gerado pelo Stit
 
 **Prerequisitos:**  Node.js
 
-**Abra o Projeto no seu VSCode e rode ao mesmo tempo que irá rodar o projeto Flix API com Django Rest Framework**
+Ative o ambiente virtual (venv):
 
-1. Install dependencias:
-   `npm install`
-2. Run app:
-   `npm run dev`
+Windows (PowerShell ou CMD):
+
+Bash
+venv\Scripts\activate
+
+
+Aplique as migrações do banco de dados (caso seja a primeira vez ou tenha alterado o models.py):
+
+Bash
+python manage.py migrate
+
+Inicie o servidor local:
+
+Bash
+python manage.py runserver
+
+Acesse no navegador:
+
+Abra o endereço [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
+(ou segure Ctrl e clique no link que aparece no terminal).
